@@ -10,7 +10,12 @@ def top_ten(subreddit):
     headers = {"User-Agent": "python:api_advanced:v1.0 (by /u/reddit_script)"}
 
     try:
-        response = requests.get(url, headers=headers, allow_redirects=True, timeout=10)
+        response = requests.get(
+            url,
+            headers=headers,
+            allow_redirects=True,
+            timeout=10,
+        )
     except requests.exceptions.RequestException:
         print(None)
         return
